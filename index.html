@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./hamburgersHamburguers.css">
+    <link rel="stylesheet" href="./hamburgersHamburgers.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <!-- el header parte superior por encima de la linea -->
+        <div class="top-menu-container">
+            <div class="logo">
+                <img src="./assets/img/Consumer_Wordmark.svg" alt="">
+            </div>
+            <div class="buttons-container">
+                <button class="get-started">Get Started
+                </button>
+                    <div class="hamburger hamburger--vortex">
+                        <div class="hamburger-box">
+                          <div class="hamburger-inner">
+
+                          </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        
+        <!-- el menu que estará por debajo de la parte
+        superior del header-->
+        
+        <!-- .drop-down-menu>nav>ul>(li>a)*6 
+        6 li que dentro tengan una etiqueta a-->
+        <div class="drop-down-menu hidden">
+            <!-- drop: muestra, hidden: oculta -->
+            <nav>
+                <ul>
+                    <li><a href="">Precios</a></li>
+                    <li><a href="">Recursos</a></li>
+                    <li><a href="">Personas físicas</a></li>
+                    <li><a href="">Negocios</a></li>
+                    <li><a href="">Desarrolladores</a></li>
+                    <li><a href="">Acerca de</a></li>
+                </ul>
+            </nav>
+            <div class="menu-buttoms-container">
+                <button>Get Started</button>
+                <button>Iniciar Sesión</button>
+            </div>
+        </div>
+        
+            
+    </header>
+    
+
+
+
+    <script>
+        /**
+         * forEach implementation for Objects/NodeLists/Arrays, automatic type loops and context options
+         *
+         * @private
+         * @author Todd Motto
+         * @link https://github.com/toddmotto/foreach
+         * @param {Array|Object|NodeList} collection - Collection of items to iterate, could be an Array, Object or NodeList
+         * @callback requestCallback      callback   - Callback function for each iteration.
+         * @param {Array|Object|NodeList} scope=null - Object/NodeList/Array that forEach is iterating over, to use as the this value when executing callback.
+         * @returns {}
+         */
+        //   var forEach=function(t,o,r){if("[object Object]"===Object.prototype.toString.call(t))for(var c in t)Object.prototype.hasOwnProperty.call(t,c)&&o.call(r,t[c],c,t);else for(var e=0,l=t.length;l>e;e++)o.call(r,t[e],e,t)};
+      
+        //   var hamburgers = document.querySelectorAll(".hamburger");
+        //   if (hamburgers.length > 0) {
+        //     forEach(hamburgers, function(hamburger) {
+        //       hamburger.addEventListener("click", function() {
+        //         this.classList.toggle("is-active");
+        //       }, false);
+        //     });
+        //   }
+
+
+        //   var hamburguesa = document.querySelectorAll(".drop-down-menu");
+        //   if (hamburguesa.length > 0) {
+        //     forEach (hamburguesa, function(hamburguesa) {
+        //         hamburguesa.addEventListener("click", function() {
+        //             this.classList.toggle("is-active");
+        //         }, false);
+        //     });
+        //   }
+          
+
+
+        // version anterior de este script, o no quien sabe
+        const menu = document.querySelector('.drop-down-menu')
+        const hamburger = document.querySelector(".hamburger");
+        // on click
+        hamburger.addEventListener("click", function() {
+            // toggle class "is-active"
+            hamburger.classList.toggle("is-active");
+            menu.classList.toggle('show')
+        });
+        </script>
+</body>
+</html>

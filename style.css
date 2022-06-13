@@ -1,0 +1,81 @@
+/* como estos datos se van a repetir creamos variables */
+:root {
+    --primary-clr: #0052ff;
+    --secundary-clr: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+/* Estos estilos corresponden al header */
+header .top-menu-container {
+    display: flex;
+    align-items: center;
+    /* background-color: aqua; */
+    /* separa el logo del (boton + menu) y segun tamaño
+    se van manteniendo de la misma manera */
+    justify-content: space-between;
+
+    /* linea debajo del menu */
+    /* sombra x (positivo a la derecha) y positivo (abajo)
+    blur o difuminado en px, spead-radius, color */
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.178);
+
+}
+
+header .top-menu-container .logo img {
+    width: 112px;
+    height: 20px;
+}
+
+header .top-menu-container .buttons-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+header .top-menu-container .get-started {
+    height: 36px;
+    width: 107px;
+    border-radius: 5px;
+    border: none;
+    font-size: 12px;
+    /* usar la variable declarada con var */
+    background-color: var(--primary-clr);
+    color: var(--secundary-clr);
+    font-weight: 600;
+    font-size: 14px;
+    /* padding: 6px 12px; */
+    margin: 10px;
+}
+
+/* header .hamburger .hamburger--vortex .hamburger-box { */
+/* .hamburger-inner {
+    display: grid;
+    background-color: red;
+} */
+
+/* mostrar el menu */
+header .drop-down-menu {
+    display: grid;
+    /* margin-top: 3px; */
+    background-color: aquamarine;
+    height: 50vw;
+    /* display: none; */
+}
+
+/* ocultar el menu */
+header .hidden {
+    display: none;
+}
+
+/* muestro el menu por javascript */
+/* menu.classList.toggle('show') */
+header .show {
+    display: grid;
+}
