@@ -1,7 +1,7 @@
 /* como estos datos se van a repetir creamos variables */
 :root {
     --primary-clr: #0052ff;
-    --secundary-clr: #ffffff;
+    --secondary-clr: #ffffff;
 }
 
 * {
@@ -25,12 +25,14 @@ header .top-menu-container {
     /* sombra x (positivo a la derecha) y positivo (abajo)
     blur o difuminado en px, spead-radius, color */
     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.178);
-
+    /* altura menu superior */
+    height: 55px;
 }
 
 header .top-menu-container .logo img {
     width: 112px;
     height: 20px;
+    margin-left: 30px;
 }
 
 header .top-menu-container .buttons-container {
@@ -64,9 +66,20 @@ header .top-menu-container .get-started {
 header .drop-down-menu {
     display: grid;
     /* margin-top: 3px; */
-    background-color: aquamarine;
+    /* background: linear-gradient(90deg, aquamarine, blue);  */
     height: 50vw;
     /* display: none; */
+
+    /* para que quede justo a la
+    altura del dispositivo se debe
+    calcular el total de la altura 
+    del dispositivo menos la altura
+    del menu*/
+    height: calc(100vh - 55px);
+
+    display: flex;
+    gap: 1.5rem;
+
 }
 
 /* ocultar el menu */
@@ -78,4 +91,70 @@ header .hidden {
 /* menu.classList.toggle('show') */
 header .show {
     display: grid;
+}
+
+
+header .drop-down-menu nav ul {
+    list-style: none;
+    padding: 0;
+    /* background-color: red; */
+    height: 100%;
+    
+    /* para distanciarlos a los items del menu */
+    display: flex;
+    flex-direction: column;
+    /* deja un espacio al arriba y abajo, luego
+    centra todo en forma vertical cada item */
+    justify-content: space-between;
+    padding-left: 1.75rem;
+    margin-top: 1.75rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+header .drop-down-menu nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;    
+}
+
+header .drop-down-menu .menu-buttons-container {
+    /* contenedor de los botones */
+    display: flex;
+    flex-direction: column;
+    /* background-color: brown; */
+    justify-content: space-evenly;
+    /* definir el margen para que se adapte
+    al responsive */
+    margin: 1.75rem;
+}
+
+header .drop-down-menu .menu-buttons-container button {
+    /* estilo de los botones */
+    padding: 1.5rem 0;
+    font-size: 1.05rem;
+    font-weight: bold;
+    border-style: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* 
+    de la clase menu-buttons-container
+button:nth-child(1) sería el primer boton hijo 
+    button:nth-child(2) sería el segundo boton hijo 
+
+
+*/
+
+header .drop-down-menu .menu-buttons-container button:nth-child(1) {
+    background-color: var(--primary-clr);
+    color: var(--secondary-clr);
+}
+
+header .drop-down-menu .menu-buttons-container button:nth-child(2) {
+    background-color: var(--secondary-clr);
+    border: 3.5px solid var(--primary-clr);
+    color: var(--primary-clr);
 }
