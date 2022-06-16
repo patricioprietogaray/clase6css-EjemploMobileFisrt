@@ -130,7 +130,7 @@ header .drop-down-menu .menu-buttons-container {
     margin: 1.75rem;
 }
 
-header .drop-down-menu .menu-buttons-container button {
+.btn-style {
     /* estilo de los botones */
     padding: 1.5rem 0;
     font-size: 1.05rem;
@@ -138,23 +138,70 @@ header .drop-down-menu .menu-buttons-container button {
     border-style: none;
     border-radius: 4px;
     cursor: pointer;
-}
-
-/* 
-    de la clase menu-buttons-container
-button:nth-child(1) sería el primer boton hijo 
-    button:nth-child(2) sería el segundo boton hijo 
-
-
-*/
-
-header .drop-down-menu .menu-buttons-container button:nth-child(1) {
+    /* child(1) */
     background-color: var(--primary-clr);
     color: var(--secondary-clr);
 }
 
+
+    /* de la clase menu-buttons-container
+button:nth-child(1) sería el primer boton hijo 
+    button:nth-child(2) sería el segundo 
+    boton hijo.
+    El child(1) esta definido en la clase
+    btn-style */
+
 header .drop-down-menu .menu-buttons-container button:nth-child(2) {
+    /* por defecto los botones se configuran
+    en la clase btn-style, luego en este caso
+    se sobreescribe */
     background-color: var(--secondary-clr);
     border: 3.5px solid var(--primary-clr);
     color: var(--primary-clr);
+}
+
+/* Estilos correspondientes a la primera seccion  */
+
+#welcome-section {
+    margin-left: 50px;
+}
+#welcome-section .svg-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--primary-clr);
+    padding-left: 20px;
+}
+
+#welcome-section > h2 {
+    font-size: 3rem;
+}
+
+#welcome-section > p {
+    line-height: 1.5rem;
+    font-size: 18px;
+    font-weight: 600;
+    width: 80%;
+}
+
+#welcome-section > .input-container {
+    /* contenedor de los botones */
+    display: flex;
+    flex-direction: column;
+    /* background-color: brown; */
+    justify-content: space-evenly;
+    /* definir el margen para que se adapte
+    al responsive */
+    margin: 1.75rem;
+    gap: 20px;
+}
+
+#welcome-section > .input-container input {
+    /* se aplica clase btn-style, se configura con 
+    child(2) */
+    background-color: var(--secondary-clr);
+    border: 2px solid rgba(0, 0, 0, 0.14);
+    color: rgba(0, 0, 0, 0.5);
 }
