@@ -205,3 +205,8 @@ header .drop-down-menu .menu-buttons-container button:nth-child(2) {
     border: 2px solid rgba(0, 0, 0, 0.14);
     color: rgba(0, 0, 0, 0.5);
 }
+
+/* objeto::propiedad para definir algo específico */
+#welcome-section > .input-container input::placeholder {
+    padding-left: 1rem;
+}
