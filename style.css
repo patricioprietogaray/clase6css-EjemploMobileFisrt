@@ -13,10 +13,11 @@ body {
 }
 
 /* Estos estilos corresponden al header */
-header .top-menu-container {
+header > .top-menu-container {
     display: flex;
-    align-items: center;
-    /* background-color: aqua; */
+    align-items: center; 
+    /* justify-content: center; */
+    background-color: aqua;
     /* separa el logo del (boton + menu) y segun tamaño
     se van manteniendo de la misma manera */
     justify-content: space-between;
@@ -27,18 +28,22 @@ header .top-menu-container {
     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.178);
     /* altura menu superior */
     height: 55px;
-}
+    /* max-width: 30vw; */
+    /* justify-content: center; */
+} 
 
 header .top-menu-container .logo img {
     width: 112px;
     height: 20px;
-    margin-left: 30px;
+    margin: 1.5rem;
+    
 }
 
 header .top-menu-container .buttons-container {
     display: flex;
-    gap: 20px;
+    gap: 1rem;
     align-items: center;
+    /* margin: 1.01rem; */
 }
 
 header .top-menu-container .get-started {
@@ -53,7 +58,7 @@ header .top-menu-container .get-started {
     font-weight: 600;
     font-size: 14px;
     /* padding: 6px 12px; */
-    margin: 10px;
+    margin: 0.5rem 0;
 }
 
 /* header .hamburger .hamburger--vortex .hamburger-box { */
@@ -168,22 +173,29 @@ header .drop-down-menu .menu-buttons-container button:nth-child(2) {
 #welcome-section .svg-container {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 0.1rem;
     font-size: 15px;
     font-weight: 700;
     color: var(--primary-clr);
     padding-left: 20px;
 }
 
-#welcome-section > h2 {
+h2 {
     font-size: 3rem;
 }
 
-#welcome-section > p {
+h3 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+p {
     line-height: 1.5rem;
     font-size: 18px;
-    font-weight: 600;
-    width: 80%;
+    font-weight: 500;
+    max-width: 80%;
+    text-align: center;
+    margin: 1.75rem;
 }
 
 #welcome-section > .input-container {
@@ -210,3 +222,45 @@ header .drop-down-menu .menu-buttons-container button:nth-child(2) {
 #welcome-section > .input-container input::placeholder {
     padding-left: 1rem;
 }
+
+#create-section {
+    margin: 4rem 0;
+}
+
+#create-section .create-upper-container {
+    text-align: center;
+}
+
+/* #create-section .create-upper-container .create-img-container { */
+    /* ancho maximo es el ancho de la ventana
+    esto hace escalable pero desde html con 100% */
+    /* max-width: 100vw; */
+   
+/* } */
+
+/* se resuelve asi: */
+img{
+    max-width: 70%;
+}
+
+#create-section .create-specifications-container .create-specifications-items {
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+    /* flex-direction: column; */
+    /* margin: 2.5rem 0; */
+    margin: 2.5rem 0;
+    align-items: center;
+    /* text-align: center; */
+}
+
+.description-container > p {
+    color:#5b616e;
+    max-width: 60%;
+    justify-content: center;
+}
+
+/* .description-container h3 {
+    font-size: 1.4rem;
+    max-width: 70%;
+} */
