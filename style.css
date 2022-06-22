@@ -2,6 +2,8 @@
 :root {
     --primary-clr: #0052ff;
     --secondary-clr: #ffffff;
+    --gray-clr: #78797a;
+    --darkgreen-clr: #098551;
 }
 
 * {
@@ -248,4 +250,50 @@ img{
 .description-container h3 {
     font-size: 1.4rem;
     max-width: 100%;
+}
+
+#crypto-chart-section ul {
+    list-style: none;
+    padding: 0;
+    color: var(--gray-clr);
+}
+
+#crypto-chart-section .crypto-flex-container {
+    display: flex;
+    justify-content: space-between;
+    padding: .3rem 2rem;
+}
+
+#crypto-chart-section .crypto-flex-container .crypto-flex-items { 
+    /* width: 35px; */
+    /* tambien se puede aplicar el estilo en la imagen html */
+
+/* ocupa el mismo espacio en cada columna */
+    flex: 1;
+    /* centrar el el eje vertical */
+    align-self: center;
+}
+
+/* OJO ATENTI ESPECIFICAR TODA LA RUTA */
+#crypto-chart-section .crypto-flex-container .crypto-flex-2 {
+    /* asigno el doble de espacio de columna para mi tabla 
+    desde el html para darle mayor jerarquia*/
+    flex: 2;
+}
+
+
+#crypto-chart-section .crypto-flex-container .crypto-aling-container {
+    display: flex;
+    align-items: center;
+    gap:.5rem;
+}
+
+#crypto-chart-section .crypto-flex-container button {
+    background-color: var(--darkgreen-clr);
+    color:#ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: .4rem 0;
+    font-size: .8rem;
+    font-weight: 600;
 }
