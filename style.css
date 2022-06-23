@@ -32,10 +32,10 @@ header > .top-menu-container {
     flex-direction: row;
     align-items:center;
     justify-content: space-between;
-    background-color: aqua;
+    /* background-color: aqua; */
     /* padding-left: 0; */
     /* justify-content: center; */
-    /* box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.178); */
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.178);
     max-height: 55px;
     max-width: 100%;
 } 
@@ -137,6 +137,7 @@ header .drop-down-menu .menu-buttons-container {
     cursor: pointer;
     background-color: var(--primary-clr);
     color: var(--secondary-clr);
+    padding: .25rem 1rem;
 }
 
 
@@ -165,7 +166,8 @@ header .drop-down-menu .menu-buttons-container button:nth-child(2) {
     header {
         /* una vez acomodado el menu lo subimos a la misma linea */
         display: flex;
-        background-color: aqua;
+        /* background-color: aqua; */
+        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.178);
     }
 
     header .top-menu-container .buttons-container {
@@ -197,17 +199,23 @@ header .drop-down-menu .menu-buttons-container button:nth-child(2) {
         margin: 0 .5rem;
     }
 
+    /* font size */
+    header .hidden nav ul li a {
+        font-size: 1rem;
+    }
+
     header .hidden .menu-buttons-container {
         flex-direction: row;
         /* alinear los botones con el menu */
-        height: auto;
+        /* height: auto; */
         margin: auto;
-        padding: auto;
+        /* padding: auto; */
+        align-items:flex-start;
     }
 
     .btn-style {
-        padding: .51rem 1rem;
-        margin:.2rem;
+        padding: .4rem 1rem;
+        margin:.3rem;
         font-size: 1rem;
         font-weight: bold;
         border-style: none;
@@ -217,6 +225,54 @@ header .drop-down-menu .menu-buttons-container button:nth-child(2) {
         color: var(--secondary-clr);
         /* background-color: violet; */
     }
+
+    header .top-menu-container .buttons-container {
+        /* display: flex; */
+        gap: .5rem;
+        /* align-items: center; */
+    }
+    header .drop-down-menu .menu-buttons-container button:nth-child(2) {  
+        background-color: var(--secondary-clr);
+        border: 3.5px solid var(--primary-clr);
+        color: var(--primary-clr);
+        padding: .25rem 1rem;
+    }
+}
+
+/* media querry a 740 para la tabla */
+@media(max-width: 740px) {
+    #crypto-chart-section ul .table-heading {
+        /* borro el titulo */
+        display: none;
+    }
+
+    #crypto-chart-section ul .id {
+        /* borrar el id */
+        display: none;
+    }   
+    
+    #crypto-chart-section ul .chart {
+        /* borrar el chart */
+        display: none;
+    }
+
+
+    #crypto-chart-section ul .botonBuy {
+
+        /* borrar el boton buy */
+        display: none;
+    }
+}
+
+@media(max-width: 520px) {
+    #crypto-chart-section ul .crypto-flex-container .title-abr {
+        /* agrupo titulo y abreviatura */
+        display: flex;
+        flex-direction: column;
+        font-weight: 600;
+
+    }
+    
 }
 
 /* Estilos correspondientes a la primera seccion  */
