@@ -252,6 +252,8 @@ img{
     max-width: 100%;
 }
 
+/* corresponde a la seccion chart .... */
+
 #crypto-chart-section ul {
     list-style: none;
     padding: 0;
@@ -261,10 +263,28 @@ img{
     max-width: 1100px;
 }
 
+#crypto-chart-section ul .table-heading {
+    /* background-color: #8ba1d1; */
+    /* padding-top: .6rem;
+    padding-bottom: .6rem; */
+    padding: 1rem 2rem;
+}
+
 #crypto-chart-section .crypto-flex-container {
     display: flex;
     justify-content: space-between;
-    padding: .3rem 2rem;
+    padding: 1rem 2rem;
+    border: solid 1px rgba(0, 0, 0, 0.14);
+}
+
+/* aplicar los siguientes estilos al ultimo item de la lista
+o al ultimo hijo de #crypto-chart-section */
+
+#crypto-chart-section .crypto-flex-container:last-child {
+    /* background-color: red; */
+    /* como tiene borde todo el ul debemos sacar la linea
+    inferior para que no se remarque con el recuadro ya impreso */
+    border-bottom: none;
 }
 
 #crypto-chart-section .crypto-flex-container .crypto-flex-items { 
@@ -300,3 +320,4 @@ img{
     font-size: .8rem;
     font-weight: 600;
 }
+
