@@ -156,6 +156,69 @@ header .drop-down-menu .menu-buttons-container button:nth-child(2) {
     color: var(--primary-clr);
 }
 
+/* media querry */
+@media(min-width: 1100px) {
+    /* desaparece el boton get started y el menu
+    hamburger para permitir que el menu
+    este en la linea */
+
+    header {
+        /* una vez acomodado el menu lo subimos a la misma linea */
+        display: flex;
+        background-color: aqua;
+    }
+
+    header .top-menu-container .buttons-container {
+        display: none;
+    }
+
+    /* poner el menu en linea */
+    header .hidden {
+        display: flex;
+        /* flex-direction: row; */
+        height: auto;
+        align-items: center;
+    }
+
+    header .hidden nav ul {
+        flex-direction: row;
+        /* gap: 1rem; */
+        margin-top: 0;
+        margin-left: .4rem;
+        /* background-color: red; */
+        height: auto;
+        padding-top: 1rem;
+    }
+
+    header .hidden nav ul li {
+        /* background-color: #0052ff; */
+        /* gap: 1rem; */
+        /* espacio de ancho entre items del menu */
+        margin: 0 .5rem;
+    }
+
+    header .hidden .menu-buttons-container {
+        flex-direction: row;
+        /* alinear los botones con el menu */
+        height: auto;
+        margin: auto;
+        padding: auto;
+    }
+
+    .btn-style {
+        padding: .51rem 1rem;
+        margin:.2rem;
+        font-size: 1rem;
+        font-weight: bold;
+        border-style: none;
+        border-radius: 4px;
+        cursor: pointer;
+        background-color: var(--primary-clr);
+        color: var(--secondary-clr);
+        /* background-color: violet; */
+    }
+}
+
 /* Estilos correspondientes a la primera seccion  */
 
 #welcome-section {
